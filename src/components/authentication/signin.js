@@ -25,12 +25,16 @@ export default class SignIn extends Component{
             value={this.state.password}
             />
             <Button text='Login' onPress={()=>this.onPress()} />
+            <Button text='Signup' onPress={()=>this.onSignupPress()}/>
         </View>)
     }
     onPress(){
         this.setState({
             password:''
         })
+    }
+    onSignupPress(){
+        this.props.navigator.push({name:'signup'})
     }
 }
 
